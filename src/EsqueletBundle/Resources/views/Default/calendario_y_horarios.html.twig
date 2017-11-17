@@ -1,1 +1,11 @@
 {% extends '::base.html.twig' %}
+
+{% block body %}
+{% for carlet in futbol %}
+<li>{{ carlet.nombre }}</li>
+<li>{{ carlet.apellidos }}</li>
+<li>{{ carlet.categoria }}</li>
+<li>{{ carlet.altura }}</li>
+<li>{{ carlet.peso }}</li>
+{% endfor %}
+{% endblock %}

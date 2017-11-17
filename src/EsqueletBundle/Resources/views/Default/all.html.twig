@@ -10,6 +10,7 @@
 
   </head>
   <body>
+    {% block body %}
     <img src="{{ asset('carlet.jpg') }}" alt=""> <a>CARLET EMF C.F.</a>
 <div class="menu">
     <ul>
@@ -26,9 +27,14 @@
     </ul>
 </div>
 
-{% block body %}{% endblock %}
+
+{% for futbol in evento %}
+<li>{{ futbol.nombre }}</li>
+{% endfor %}
+
 
 <footer>Esto es el footer de la pagina web de la escuela de futbol de Carlet</footer>
+    {% endblock %}
     {% block javascripts %}{% endblock %}
   </body>
 </html>

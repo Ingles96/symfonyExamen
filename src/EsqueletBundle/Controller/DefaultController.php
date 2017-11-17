@@ -7,12 +7,38 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class DefaultController extends Controller
 {
+
+  /**
+   * @Route("/all", name="all")
+   */
+  public function allAction()
+  {
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $futbol = $repository->findAll();
+      return $this->render('EsqueletBundle:Default:all.html.twig',array("evento"=>$futbol));
+  }
+
+  /**
+   * @Route("/calendario_y_horarios", name="calendario_y_horarios")
+   */
+  public function calendarioAction()
+  {
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $calendar = $repository->findAll();
+      return $this->render('EsqueletBundle:Default:calendario_y_horarios.html.twig',array("futbol"=>$calendar));
+  }
+
     /**
      * @Route("/inicio", name="inicio")
      */
     public function inicioAction()
     {
-        return $this->render('EsqueletBundle:Default:inicio.html.twig');
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $calendar = $repository->findAll();
+        return $this->render('EsqueletBundle:Default:inicio.html.twig',array("futbol"=>$calendar));
     }
 
     /**
@@ -20,7 +46,10 @@ class DefaultController extends Controller
      */
     public function noticiasAction()
     {
-        return $this->render('EsqueletBundle:Default:noticias.html.twig');
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $calendar = $repository->findAll();
+        return $this->render('EsqueletBundle:Default:noticias.html.twig',array("futbol"=>$calendar));
     }
 
     /**
@@ -28,7 +57,10 @@ class DefaultController extends Controller
      */
     public function inscripcionesAction()
     {
-        return $this->render('EsqueletBundle:Default:inscripciones.html.twig');
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $calendar = $repository->findAll();
+        return $this->render('EsqueletBundle:Default:inscripciones.html.twig',array("futbol"=>$calendar));
     }
 
     /**
@@ -36,7 +68,10 @@ class DefaultController extends Controller
      */
     public function instalacionesAction()
     {
-        return $this->render('EsqueletBundle:Default:instalaciones.html.twig');
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $calendar = $repository->findAll();
+        return $this->render('EsqueletBundle:Default:instalaciones.html.twig',array("futbol"=>$calendar));
     }
 
     /**
@@ -44,7 +79,10 @@ class DefaultController extends Controller
      */
     public function contactoAction()
     {
-        return $this->render('EsqueletBundle:Default:contacto.html.twig');
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $calendar = $repository->findAll();
+        return $this->render('EsqueletBundle:Default:contacto.html.twig',array("futbol"=>$calendar));
     }
 
     /**
@@ -52,23 +90,23 @@ class DefaultController extends Controller
      */
     public function plantillaAction()
     {
-        return $this->render('EsqueletBundle:Default:plantilla.html.twig');
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $calendar = $repository->findAll();
+        return $this->render('EsqueletBundle:Default:plantilla.html.twig',array("futbol"=>$calendar));
     }
 
-    /**
-     * @Route("/calendario_y_horarios", name="calendario_y_horarios y horarios")
-     */
-    public function calendarioAction()
-    {
-        return $this->render('EsqueletBundle:Default:calendario_y_horarios.html.twig');
-    }
+
 
     /**
      * @Route("/resultados_y_clasificacion", name="resultados_y_clasificacion")
      */
     public function resultados_y_clasificacionAction()
     {
-        return $this->render('EsqueletBundle:Default:resultados_y_clasificacion.html.twig');
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $calendar = $repository->findAll();
+        return $this->render('EsqueletBundle:Default:resultados_y_clasificacion.html.twig',array("futbol"=>$calendar));
     }
 
     /**
@@ -76,7 +114,10 @@ class DefaultController extends Controller
      */
     public function rankingsAction()
     {
-        return $this->render('EsqueletBundle:Default:rankings.html.twig');
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $calendar = $repository->findAll();
+        return $this->render('EsqueletBundle:Default:rankings.html.twig',array("futbol"=>$calendar));
     }
 
     /**
@@ -84,7 +125,10 @@ class DefaultController extends Controller
      */
     public function mi_perfilAction()
     {
-        return $this->render('EsqueletBundle:Default:mi_perfil.html.twig');
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $calendar = $repository->findAll();
+        return $this->render('EsqueletBundle:Default:mi_perfil.html.twig',array("futbol"=>$calendar));
     }
 
     /**
@@ -92,6 +136,9 @@ class DefaultController extends Controller
      */
     public function registroAction()
     {
-        return $this->render('EsqueletBundle:Default:registro.html.twig');
+      $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+      // find *all* datos
+      $calendar = $repository->findAll();
+        return $this->render('EsqueletBundle:Default:registro.html.twig',array("futbol"=>$calendar));
     }
 }

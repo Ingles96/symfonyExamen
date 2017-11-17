@@ -1,7 +1,7 @@
 esquelet:
     resource: "@EsqueletBundle/Controller/"
     type:     annotation
-    prefix:   /proyecto
+    prefix:   /
 
 app:
     resource: '@AppBundle/Controller/'
