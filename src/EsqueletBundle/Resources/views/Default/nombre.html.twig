@@ -1,0 +1,7 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+{% for carlet in futbol %}
+<li>{{ carlet.nombre }}</li>
+  <li><a href="{{ path('/nombre', {'nombre': carlet.nombre}) }}">mostrar</a></li>
+{% endfor %}
+{% endblock %}

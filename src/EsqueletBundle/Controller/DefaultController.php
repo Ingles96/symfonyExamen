@@ -98,6 +98,23 @@ class DefaultController extends Controller
 
 
 
+
+
+    /**
+     * @Route("/nombre/{nombre}", name="nombre")
+     */
+    public function plantillaPorNombreAction($nombre)
+    {
+        $repository = $this->getDoctrine()->getRepository('EsqueletBundle:Carlet');
+        //buscar por nombre
+        $cervezas = $repository->findByNombre($nombre);
+        //
+        return $this->render('EsqueletBundle:Default:nombre.html.twig',array("futbol"=>$nombre));
+    }
+
+
+
+
     /**
      * @Route("/resultados_y_clasificacion", name="resultados_y_clasificacion")
      */
@@ -141,4 +158,6 @@ class DefaultController extends Controller
       $calendar = $repository->findAll();
         return $this->render('EsqueletBundle:Default:registro.html.twig',array("futbol"=>$calendar));
     }
+
+
 }
